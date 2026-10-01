@@ -182,7 +182,10 @@
       return;
     }
     var btn=form.querySelector('button[type=submit]'); btn.disabled=true;
-    fetch('/',{method:'POST',body:new FormData(form)})
+    var fd=new FormData(form);
+    // iPhone Safari can fail the whole send when a file field is left empty, so drop empty file fields.
+    Array.from(fd.entries()).forEach(function(e){ if(e[1] instanceof File && !e[1].name && !e[1].size) fd.delete(e[0]); });
+    fetch('/',{method:'POST',body:fd})
       .then(function(r){ if(!r.ok) throw new Error('status '+r.status); form.reset(); show('Thanks. Your request was sent. We will reply within one business day.'); })
       .catch(function(err){
         // Background send failed: let the browser post the form directly so Netlify handles it (and shows its own page).
