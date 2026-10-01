@@ -70,7 +70,7 @@ FOOTER=f'''<!-- ============ FOOTER ============ -->
         <li><a href="index.html#about">About Daniel</a></li>
         <li><a href="index.html#how">How it works</a></li>
         <li><a href="quote.html">Get a quote</a></li>
-        <li><a href="index.html#top" class="ph">Privacy policy (PENDING)</a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
       </ul>
     </nav>
     <!-- DISCLAIMER: TEMPLATE TEXT, PENDING compliance and legal review -->
@@ -343,7 +343,7 @@ QUOTE=f'''{header("quote")}
           <div class="f full"><label for="q-notes">Anything else we should know?</label><textarea id="q-notes" name="notes" placeholder="Mitigation work done, prior claims, coverage you want to keep"></textarea></div>
         </fieldset>
 
-        <label class="check" for="q-consent"><input id="q-consent" name="consent" type="checkbox"><span>I agree that DGD Risk and Insurance Services may contact me by phone, text or email about my request. Consent is not a condition of purchase. <span class="ph">See our privacy policy (PENDING).</span></span></label>
+        <label class="check" for="q-consent"><input id="q-consent" name="consent" type="checkbox"><span>I agree that DGD Risk and Insurance Services may contact me by phone, text or email about my request. Consent is not a condition of purchase. See our <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a>.</span></label>
 
         <div><button class="btn btn-primary" type="submit">Send my request <span class="arrow" aria-hidden="true">→</span></button></div>
         <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
@@ -413,8 +413,115 @@ QUOTE=f'''{header("quote")}
 }})();
 </script>'''
 
+PRIVACY=f'''{header("privacy")}
+
+<main id="main">
+  <section class="page-head dark" aria-labelledby="p-title">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--on-dark-muted)">Legal</p>
+      <h1 id="p-title">Privacy policy.</h1>
+      <p>How DGD Risk and Insurance Services collects, uses, shares and protects your personal information.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap legal">
+      <p class="ph"><strong>Effective date: [PENDING].</strong> Draft for review by DGD and its legal counsel before publication.</p>
+
+      <h2>1. Who we are and what this policy covers</h2>
+      <p>DGD Risk and Insurance Services, LLC ("DGD," "we," "us") is an insurance brokerage based in California. Daniel Delac is the firm's licensed broker. This policy explains how we handle personal information we collect through this website (dgdrisk.com), by phone, text and email, and in the course of finding, placing and servicing insurance for you. It is also our notice of information practices under the California Insurance Information and Privacy Protection Act (California Insurance Code sections 791 and following).</p>
+      <p>By using this website or giving us information, you acknowledge this policy. If you do not agree with it, please do not submit information through the site and contact us by phone instead.</p>
+
+      <h2>2. Information we collect</h2>
+      <h3>Information you give us</h3>
+      <ul>
+        <li><strong>Contact details:</strong> name, phone number, email address.</li>
+        <li><strong>Property details:</strong> property address and ZIP code, square footage, estimated market value, how the home is used (owner occupied, rental or vacation home), and anything you tell us in the comments box.</li>
+        <li><strong>Insurance details</strong> you share by phone, email or in documents: current and prior policies, declarations pages, non-renewal or cancellation notices, renewal dates, prior claims, and wildfire mitigation work.</li>
+        <li><strong>Application information</strong> an insurer requires to quote or issue a policy, which may include dates of birth, information about other household members, mortgage or lender details, and payment information.</li>
+      </ul>
+      <h3>Information from other sources</h3>
+      <p>To obtain quotes and place coverage, we and the insurers we work with may receive information about you or your property from:</p>
+      <ul>
+        <li>insurance companies, wholesale brokers and surplus lines brokers;</li>
+        <li>insurance-support organizations, such as databases of prior insurance claims;</li>
+        <li>property inspection, replacement-cost and wildfire risk scoring services;</li>
+        <li>public records, such as property and permit records;</li>
+        <li>consumer reporting agencies, where permitted by law.</li>
+      </ul>
+      <h3>Information collected automatically</h3>
+      <p>Our website is hosted by Netlify, Inc. Like most web hosts, Netlify automatically records technical information when you visit, such as your IP address, browser type, the pages you request and the date and time of your visit. These records are used to operate and secure the site. The site loads fonts from Google Fonts, which receives your IP address and browser information when a page loads.</p>
+      <p>We do not use advertising cookies, analytics trackers or social media tracking pixels on this website. Because we do not track you across other websites, we do not respond differently to browser "Do Not Track" signals.</p>
+
+      <h2>3. How we use your information</h2>
+      <ul>
+        <li>to respond to your request and contact you about it;</li>
+        <li>to assess your insurance needs and your property's risk;</li>
+        <li>to request quotes from, and submit applications to, insurers and wholesale or surplus lines brokers;</li>
+        <li>to place, renew and service your policy and help you with claims;</li>
+        <li>to suggest loss-prevention and wildfire mitigation steps;</li>
+        <li>to keep business records and meet our legal, regulatory and licensing obligations;</li>
+        <li>to detect and prevent fraud and to protect our rights and the security of our website.</li>
+      </ul>
+
+      <h2>4. How we share your information</h2>
+      <p>We share personal information only as needed for the purposes above, with:</p>
+      <ul>
+        <li><strong>Insurers and other insurance intermediaries</strong>, including wholesale brokers and surplus lines brokers, so they can quote, underwrite, issue and service your coverage. Their own privacy notices govern how they use your information.</li>
+        <li><strong>Service providers</strong> who help us run our business, such as our website and form host (Netlify) and our email provider, under obligations to use the information only to provide their services to us.</li>
+        <li><strong>Government authorities and regulators</strong>, including the California Department of Insurance, when required by law, subpoena or court order, or to report suspected insurance fraud.</li>
+        <li><strong>Others with your consent</strong>, such as your mortgage lender or a family member you authorize.</li>
+        <li><strong>A successor</strong>, if DGD's business is sold, merged or transferred, subject to this policy.</li>
+      </ul>
+      <p><strong>We do not sell your personal information, and we do not share it for targeted advertising.</strong> We do not share nonpublic personal information with companies outside DGD for their own marketing. Except as the law permits without consent (for example, to process your insurance transaction), we will not disclose your nonpublic personal information to nonaffiliated third parties without your consent, as required by the California Financial Information Privacy Act.</p>
+
+      <h2>5. Insurance information practices</h2>
+      <ul>
+        <li><strong>Pretext interviews.</strong> We do not use pretext interviews, meaning we do not pretend to be someone else to obtain information about you.</li>
+        <li><strong>Investigative consumer reports.</strong> An insurer considering your application may request an investigative consumer report. If so, you may ask to be interviewed in connection with that report and to receive a copy of it.</li>
+        <li><strong>Information disclosed without your authorization.</strong> Information we or an insurer collect may be disclosed to others without your prior authorization only in the circumstances California Insurance Code section 791.13 allows.</li>
+      </ul>
+
+      <h2>6. Your rights</h2>
+      <h3>Access and correction</h3>
+      <p>Under California insurance privacy law, you may ask in writing to see the recorded personal information we hold about you, to learn who it has been disclosed to, and to have inaccurate information corrected, amended or deleted. We will respond within 30 business days. If we decline to make a correction, you may submit a statement explaining why you disagree, which we will keep with your file and share with anyone who receives the disputed information.</p>
+      <h3>Adverse underwriting decisions</h3>
+      <p>If an insurer declines, cancels, non-renews or charges more for coverage based on information about you, you may ask for the specific reasons in writing and for a summary of your rights.</p>
+      <h3>California Consumer Privacy Act</h3>
+      <p>Much of the information we handle is governed by the federal Gramm-Leach-Bliley Act and California insurance privacy laws rather than the California Consumer Privacy Act (CCPA). To the extent the CCPA applies to DGD and to your information, you may request to know what personal information we have collected about you, to delete it, and to correct it, and you will not be treated differently for using these rights. You may make a request yourself or through an authorized agent. We will verify your identity before responding.</p>
+      <h3>"Shine the Light"</h3>
+      <p>We do not disclose personal information to third parties for their direct marketing purposes.</p>
+      <p>To use any of these rights, contact us as shown in section 12.</p>
+
+      <h2>7. Calls, texts and email</h2>
+      <p>When you check the consent box on our quote form, you agree that DGD may contact you about your request by phone call, text message or email at the contact details you provided, including by automated means. Consent is not a condition of purchase. Message and data rates may apply. You can withdraw consent at any time by replying STOP to a text, asking us to stop when we call, or emailing us.</p>
+
+      <h2>8. How we protect your information</h2>
+      <p>We use reasonable administrative, technical and physical safeguards, appropriate to a small firm and to the sensitivity of the information, to protect personal information from unauthorized access, use and disclosure. Website traffic is encrypted with HTTPS. No method of transmission or storage is completely secure, so please do not send Social Security numbers, bank account or card numbers through the website form or ordinary email. Call us and we will arrange a secure way to share them.</p>
+
+      <h2>9. How long we keep information</h2>
+      <p>We keep personal information for as long as needed to respond to you, place and service your insurance, and resolve disputes, and for at least as long as California insurance record-keeping rules require. When information is no longer needed, we delete or securely dispose of it.</p>
+
+      <h2>10. Children</h2>
+      <p>This website is not directed to children under 16, and we do not knowingly collect personal information from them.</p>
+
+      <h2>11. Changes to this policy</h2>
+      <p>We may update this policy from time to time. We will post the new version on this page with a new effective date. If we make material changes to how we share personal information, we will give any notice the law requires.</p>
+
+      <h2>12. Contact us</h2>
+      <p>DGD Risk and Insurance Services, LLC<br>Attn: Daniel Delac<br><span class="ph">[Office address PENDING]</span><br>Phone: <a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a><br>Email: <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+      <p>If you have a concern we have not resolved, you may contact the California Department of Insurance Consumer Hotline at 1-800-927-4357 or insurance.ca.gov.</p>
+    </div>
+  </section>
+</main>
+
+{FAB}
+
+{FOOTER}'''
+
 META={'index':('DGD Risk and Insurance Services | Hard-to-Insure Homes in Northern California','Homeowners insurance for hard-to-insure homes in Northern California: Truckee, Tahoe, the South Bay and Monterey County. Wholesale and specialty market access.'),
-      'quote':('Get a Quote | DGD Risk and Insurance Services','Request a homeowners insurance quote for a hard-to-insure home in Northern California.')}
+      'quote':('Get a Quote | DGD Risk and Insurance Services','Request a homeowners insurance quote for a hard-to-insure home in Northern California.'),
+      'privacy':('Privacy Policy | DGD Risk and Insurance Services','How DGD Risk and Insurance Services collects, uses, shares and protects personal information.')}
 
 def full(name,body):
     t,d=META[name]
@@ -436,7 +543,7 @@ def full(name,body):
 </body>
 </html>
 '''
-for n,b in (('index',INDEX),('quote',QUOTE)):
+for n,b in (('index',INDEX),('quote',QUOTE),('privacy',PRIVACY)):
     open(f'{PROD}/{n}.html','w').write(full(n,b))
 for f in ('styles.css','logo.svg','logo-full.svg'):
     shutil.copy(os.path.join(S,f),PROD); shutil.copy(os.path.join(S,f),ART)

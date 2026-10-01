@@ -259,3 +259,12 @@ legend.sub{font:700 .95rem/1.4 var(--font-body);color:var(--forest);margin:0 0 4
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 .site-footer .logo-text small{color:var(--on-dark-muted)}
+
+/* ---- Legal pages ---- */
+.legal{max-width:72ch}
+.legal h2{font-size:clamp(1.35rem,1.1rem + .8vw,1.7rem);margin:2.2em 0 .5em}
+.legal h3{font-family:var(--font-body);font-weight:700;font-size:1.05rem;margin:1.4em 0 .4em}
+.legal p{margin:0 0 1em}
+.legal p,.legal li{line-height:1.65}
+.legal ul{padding-left:1.2em;margin:.6em 0 1em}
+.legal li+li{margin-top:.35em}
