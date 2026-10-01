@@ -1,0 +1,4 @@
+# DGD Risk and Insurance Services website on Netlify.
+# Only the public/ folder is served. src/ holds the build script and source assets.
+[build]
+  publish = "public"
