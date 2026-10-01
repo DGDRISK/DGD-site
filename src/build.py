@@ -9,7 +9,7 @@ EMAIL='Delac.dgd@gmail.com'  # PENDING: switch to @dgdrisk.com address
 
 FONTS='''<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Schibsted+Grotesk:wght@400;500;700&family=Martian+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Montserrat:wght@600;800&family=Schibsted+Grotesk:wght@400;500;700&family=Martian+Mono:wght@400;600&display=swap">
 <link rel="stylesheet" href="styles.css">'''
 
 def header(active):
@@ -20,9 +20,9 @@ def header(active):
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="DGD Risk and Insurance Services, home">
-      <!-- LOGO: PROVISIONAL "Home in the Pines" mark (logo.svg); full lockup in logo-full.svg -->
-      <img src="logo.svg" alt="" width="44" height="44">
-      <span class="logo-text">DGD<small>Risk and Insurance Services</small></span>
+      <!-- LOGO: final "Home Shield" mark (logo.svg); full lockup in logo-full.svg -->
+      <img src="logo.svg" alt="" width="40" height="45">
+      <span class="logo-text">DGD<small>Risk and Insurance Services LLC</small></span>
     </a>
     <nav class="nav-desktop" aria-label="Primary">
       <ul>
@@ -59,7 +59,7 @@ FOOTER=f'''<!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-brand">
-      <span class="logo-text">DGD<small>Risk and Insurance Services</small></span>
+      <span class="logo-text">DGD<small>Risk and Insurance Services LLC</small></span>
       <p class="ph">[Office address PENDING]</p>
       <p><a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
     </div>
