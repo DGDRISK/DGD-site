@@ -106,7 +106,7 @@ a{color:inherit}
 
 /* ---------- Credibility strip ---------- */
 .trust{background:var(--white);border-bottom:1px solid var(--rule)}
-.trust ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.trust ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .trust li{padding:var(--zone-1) var(--zone-1) var(--zone-1) 0;display:grid;gap:6px;align-content:start;min-width:0}
 .trust li + li{padding-left:var(--zone-1);border-left:1px solid var(--rule)}
 .trust strong{font:400 clamp(1.7rem,1.3rem + 1.4vw,2.4rem)/1.05 var(--font-display);color:var(--forest)}
@@ -236,9 +236,6 @@ legend.sub{font:700 .95rem/1.4 var(--font-body);color:var(--forest);margin:0 0 4
   .nav-mobile{display:block}
   .about-side,.letter,.hero-main,.hero-aside,.section-head h2,.section-head p,.final h2,.final-body,.quote-form,.form-aside{grid-column:1/-1}
   .hero-aside{align-self:start}
-  .trust ul{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .trust li:nth-child(3){padding-left:0;border-left:0}
-  .trust li:nth-child(n+3){border-top:1px solid var(--rule)}
   .reviews{grid-template-columns:minmax(0,1fr)}
   .footer-brand,.footer-nav,.footer-legal{grid-column:1/-1}
 }
@@ -268,3 +265,5 @@ legend.sub{font:700 .95rem/1.4 var(--font-body);color:var(--forest);margin:0 0 4
 .legal p,.legal li{line-height:1.65}
 .legal ul{padding-left:1.2em;margin:.6em 0 1em}
 .legal li+li{margin-top:.35em}
+.service:last-child:nth-child(odd){grid-column:1/-1;padding-left:0;border-left:0}
+.service:last-child:nth-child(odd)::after{left:0}
