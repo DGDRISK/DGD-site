@@ -152,7 +152,7 @@ INDEX=f'''{header("home")}
       <div class="hero-main">
         <p class="eyebrow">Northern California · Hard-to-insure homes</p>
         <!-- HEADLINE: PENDING owner's final choice (option 1 shown) -->
-        <h1 id="hero-title">Closing the coverage gap in <em>Northern California's hardest-to-insure places.</em></h1>
+        <h1 id="hero-title">Closing the coverage gap in <em>Northern California's hardest-to-insure homes.</em></h1>
         <p class="hero-lede">When the major carriers stop writing in Truckee, Tahoe, the South Bay hills or Monterey County, DGD goes to wholesale and specialty markets to place your property and liability coverage.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="quote.html">Get a quote <span class="arrow" aria-hidden="true">→</span></a>
