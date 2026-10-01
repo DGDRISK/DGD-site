@@ -322,16 +322,16 @@ QUOTE=f'''{header("quote")}
         <fieldset>
           <legend>Owner</legend>
           <div class="f"><label for="q-name">Owner name <span class="req" aria-hidden="true">*</span></label><input id="q-name" name="name" autocomplete="name" required></div>
-          <div class="f"><label for="q-phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="q-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="f"><label for="q-phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="q-phone" name="phone" type="tel" autocomplete="tel" maxlength="14" pattern="\(\d{{3}}\) \d{{3}}-\d{{4}}" placeholder="(916) 555-0123" title="10-digit phone number" required></div>
           <div class="f full"><label for="q-email">Email</label><input id="q-email" name="email" type="email" autocomplete="email"></div>
         </fieldset>
 
         <fieldset>
           <legend>The property</legend>
           <div class="f full"><label for="q-address">Property address</label><input id="q-address" name="address" autocomplete="street-address"></div>
-          <div class="f"><label for="q-zip">ZIP code</label><input id="q-zip" name="zip" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{{5}}"></div>
+          <div class="f"><label for="q-zip">ZIP code</label><input id="q-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{{5}}" title="5-digit ZIP code"></div>
           <div class="f"><label for="q-sqft">Square footage</label><input id="q-sqft" name="square_feet" inputmode="numeric" pattern="[0-9,]{{3,7}}" placeholder="e.g. 2,400" aria-describedby="q-sqft-hint"><span class="hint" id="q-sqft-hint">Living area. An estimate is fine.</span></div>
-          <div class="f"><label for="q-market">Market value</label><input id="q-market" name="market_value" inputmode="numeric" pattern="\$?[0-9,]{{5,12}}" placeholder="e.g. $1,250,000" aria-describedby="q-market-hint"><span class="hint" id="q-market-hint">What the home would sell for today. An estimate is fine.</span></div>
+          <div class="f"><label for="q-market">Market value</label><input id="q-market" name="market_value" inputmode="numeric" maxlength="14" pattern="\$[0-9]{{1,3}}(,[0-9]{{3}})*" placeholder="e.g. $1,250,000" title="Dollar amount" aria-describedby="q-market-hint"><span class="hint" id="q-market-hint">What the home would sell for today. An estimate is fine.</span></div>
           <fieldset class="f full use"><legend class="sub">How is the home used?</legend>
             <div class="checks">
               <label class="check" for="q-use-owner"><input id="q-use-owner" name="use_owner_occupied" type="checkbox" value="Owner occupied"><span>Owner occupied</span></label>
@@ -340,23 +340,6 @@ QUOTE=f'''{header("quote")}
             </div>
             <span class="hint">Check all that apply.</span>
           </fieldset>
-          <div class="f"><label for="q-status">Current situation</label>
-            <select id="q-status" name="status">
-              <option value="">Choose one</option>
-              <option>Received a non-renewal or cancellation</option>
-              <option>Currently on the FAIR Plan</option>
-              <option>Premium went up sharply</option>
-              <option>Buying a home</option>
-              <option>Other</option>
-            </select></div>
-          <div class="f"><label for="q-renewal">Renewal or closing date</label><input id="q-renewal" name="renewal_date" type="date"></div>
-          <div class="f"><label for="q-roof">Roof type</label>
-            <select id="q-roof" name="roof">
-              <option value="">Choose one</option>
-              <option>Metal</option><option>Tile or concrete</option><option>Composition shingle</option><option>Wood shake</option><option>Not sure</option>
-            </select></div>
-          <div class="f"><label for="q-built">Year built</label><input id="q-built" name="year_built" inputmode="numeric" pattern="[0-9]{{4}}"></div>
-          <div class="f full"><label for="q-file">Non-renewal notice or declarations page</label><input id="q-file" name="document" type="file" accept=".pdf,.jpg,.jpeg,.png,.heic"><span class="hint">PDF or photo. Optional, but it speeds things up.</span></div>
           <div class="f full"><label for="q-notes">Anything else we should know?</label><textarea id="q-notes" name="notes" placeholder="Mitigation work done, prior claims, coverage you want to keep"></textarea></div>
         </fieldset>
 
@@ -394,6 +377,14 @@ QUOTE=f'''{header("quote")}
 (function(){{
   var form=document.getElementById('quote-form'), status=document.getElementById('form-status');
   function show(msg,isError){{status.hidden=false;status.className='form-status'+(isError?' error':'');status.textContent=msg;}}
+  function digits(el,max){{ return el.value.replace(/\D/g,'').slice(0,max); }}
+  var zip=document.getElementById('q-zip'), phone=document.getElementById('q-phone'), market=document.getElementById('q-market');
+  zip.addEventListener('input',function(){{ zip.value=digits(zip,5); }});
+  phone.addEventListener('input',function(){{
+    var d=phone.value.replace(/\D/g,''); d=d.replace(/^1/,''); // US area codes never start with 1, so drop a typed +1 d=d.slice(0,10);
+    phone.value=d.length>6?'('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6):d.length>3?'('+d.slice(0,3)+') '+d.slice(3):d;
+  }});
+  market.addEventListener('input',function(){{ var d=digits(market,10); market.value=d?'$'+Number(d).toLocaleString('en-US'):''; }});
   form.addEventListener('submit',function(e){{
     e.preventDefault();
     if(!form.checkValidity()){{
