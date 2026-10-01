@@ -183,8 +183,12 @@
     }
     var btn=form.querySelector('button[type=submit]'); btn.disabled=true;
     fetch('/',{method:'POST',body:new FormData(form)})
-      .then(function(r){ if(!r.ok) throw new Error(); form.reset(); show('Thanks. Your request was sent. We will reply within one business day.'); })
-      .catch(function(){ show('Your request could not be sent. Please call (916) 730-1954 or email Delac.dgd@gmail.com.',true); })
+      .then(function(r){ if(!r.ok) throw new Error('status '+r.status); form.reset(); show('Thanks. Your request was sent. We will reply within one business day.'); })
+      .catch(function(err){
+        // Background send failed: let the browser post the form directly so Netlify handles it (and shows its own page).
+        if(!form.dataset.retried){ form.dataset.retried='1'; HTMLFormElement.prototype.submit.call(form); return; }
+        show('Your request could not be sent ('+(err&&err.message||'network')+'). Please call (916) 730-1954 or email Delac.dgd@gmail.com.',true);
+      })
       .finally(function(){ btn.disabled=false; });
   });
 })();
