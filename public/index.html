@@ -35,6 +35,10 @@
     </nav>
   </div>
 </header>
+<script>
+  // Shrink the header once the page is scrolled, so it stays visible without taking over the screen.
+  (function(){var h=document.querySelector('.site-header');function u(){h.classList.toggle('compact',window.scrollY>40);}u();window.addEventListener('scroll',u,{passive:true});})();
+</script>
 
 <main id="main">
 

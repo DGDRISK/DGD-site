@@ -33,7 +33,11 @@ def header(active):
       </ul>
     </nav>
   </div>
-</header>'''
+</header>
+<script>
+  // Shrink the header once the page is scrolled, so it stays visible without taking over the screen.
+  (function(){{var h=document.querySelector('.site-header');function u(){{h.classList.toggle('compact',window.scrollY>40);}}u();window.addEventListener('scroll',u,{{passive:true}});}})();
+</script>'''
 
 FAB='''<!-- Floating quote button (hidden on the quote page) -->
 <a class="fab" href="quote.html" aria-label="Get a quote">
