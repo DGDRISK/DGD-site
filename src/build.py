@@ -21,28 +21,17 @@ def header(active):
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="DGD Risk and Insurance Services, home">
       <!-- LOGO: final "Home Shield" mark (logo.svg); full lockup in logo-full.svg -->
-      <img src="logo.svg" alt="" width="64" height="72">
+      <img src="logo.svg" alt="" width="80" height="90">
       <span class="logo-text">DGD<small>Risk and Insurance Services LLC</small></span>
     </a>
     <nav class="nav-desktop" aria-label="Primary">
       <ul>
         <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#about">About Daniel</a></li>
-        <li><a href="contact.html"{cur("contact")}>Contact us</a></li>
+        <li><a href="index.html#about">About<span class="long"> Daniel</span></a></li>
+        <li><a href="contact.html"{cur("contact")}>Contact<span class="long"> us</span></a></li>
         <li><a class="btn btn-primary" href="quote.html"{cur("quote")}>Get a quote</a></li>
       </ul>
     </nav>
-    <details class="nav-mobile">
-      <summary>Menu</summary>
-      <nav aria-label="Primary mobile">
-        <ul>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#about">About Daniel</a></li>
-          <li><a href="quote.html">Get a quote</a></li>
-          <li><a href="contact.html"{cur("contact")}>Contact us</a></li>
-        </ul>
-      </nav>
-    </details>
   </div>
 </header>'''
 

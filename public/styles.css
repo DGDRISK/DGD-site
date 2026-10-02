@@ -70,10 +70,10 @@ a{color:inherit}
 
 /* ---------- Header ---------- */
 .site-header{background:var(--ivory);color:var(--forest);position:sticky;top:env(safe-area-inset-top,0px);z-index:50;border-bottom:1px solid var(--rule)}
-.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:104px}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:120px;padding-block:12px}
 .logo{display:flex;align-items:center;gap:16px;text-decoration:none}
-.logo img{width:64px;height:72px;flex:none}
-.logo-text{font:800 2.4rem/1 "Montserrat",var(--font-body);letter-spacing:.02em}
+.logo img{width:80px;height:90px;flex:none}
+.logo-text{font:800 3rem/1 "Montserrat",var(--font-body);letter-spacing:.02em}
 .logo-text small{display:block;font:600 .78rem/1.3 "Montserrat",var(--font-body);letter-spacing:.09em;text-transform:uppercase;color:var(--forest);margin-top:6px}
 .nav-desktop ul{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0}
 .nav-desktop a:not(.btn){text-decoration:none;font-size:1.05rem;font-weight:500;padding-block:6px;background:linear-gradient(var(--copper) 0 0) no-repeat left bottom/0% 2px;transition:background-size var(--t) var(--ease)}
@@ -93,7 +93,7 @@ a{color:inherit}
 .hero .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--zone-1) 16px;padding-block:var(--zone-2) var(--zone-1);position:relative;z-index:1}
 .hero-main{grid-column:1/9;display:grid;gap:var(--zone-1);align-content:start}
 .hero .eyebrow{color:var(--copper-text)}
-.hero h1{font-size:clamp(2.8rem,1.6rem + 5vw,6rem)}
+.hero h1{font-size:clamp(2.1rem,1.4rem + 3.2vw,4.5rem)}
 .hero h1 em{font-style:italic;color:var(--copper-text)}
 .hero-lede{font-size:clamp(1.15rem,1rem + .5vw,1.35rem);max-width:54ch}
 .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px}
@@ -232,8 +232,10 @@ legend.sub{font:700 .95rem/1.4 var(--font-body);color:var(--forest);margin:0 0 4
 
 /* ---------- Responsive ---------- */
 @media (max-width:960px){
-  .nav-desktop{display:none}
-  .nav-mobile{display:block}
+  .site-header{position:static}
+  .site-header .wrap{flex-direction:column;align-items:stretch;gap:12px;min-height:0;padding-block:16px 0}
+  .nav-desktop{border-top:1px solid var(--rule)}
+  .nav-desktop ul{justify-content:space-between;gap:12px;min-height:56px}
   .about-side,.letter,.hero-main,.hero-aside,.section-head h2,.section-head p,.final h2,.final-body,.quote-form,.form-aside{grid-column:1/-1}
   .hero-aside{align-self:start}
   .reviews{grid-template-columns:minmax(0,1fr)}
@@ -247,11 +249,13 @@ legend.sub{font:700 .95rem/1.4 var(--font-body);color:var(--forest);margin:0 0 4
   .trust ul{grid-template-columns:minmax(0,1fr)}
   .trust li,.trust li + li{padding-left:0;border-left:0;padding-block:var(--zone-0)}
   .trust li + li{border-top:1px solid var(--rule)}
-  .logo-text{font-size:1.9rem}
-  .logo-text small{font-size:.6rem;letter-spacing:.04em}
-  .logo img{width:52px;height:58px}
-  .site-header .wrap{min-height:84px}
-  .logo{gap:10px}
+  .logo-text{font-size:2.6rem}
+  .logo-text small{font-size:.66rem;letter-spacing:.05em}
+  .logo img{width:64px;height:72px}
+  .logo{gap:12px}
+  .nav-desktop .long{display:none}
+  .nav-desktop a:not(.btn){font-size:.95rem}
+  .nav-desktop .btn{min-height:40px;padding:.55rem .8rem;font-size:.85rem}
   .fab span{display:none}
   .fab{padding:0;width:56px;justify-content:center}
 }
