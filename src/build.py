@@ -149,14 +149,14 @@ INDEX=f'''{header("home")}
         <p class="eyebrow">Hard-to-insure homes · Wildfire zones</p>
         <!-- HEADLINE: owner's choice -->
         <h1 id="hero-title">Closing the coverage gap for <em>the hardest-to-insure homes.</em></h1>
-        <p class="hero-lede">When standard carriers say no, DGD opens the door to wholesale insurance markets most homeowners never see. Your home deserves coverage, and those markets are built for hard-to-insure homes in high wildfire-risk areas that others won't touch. You probably don't have to settle for coverage on the FAIR Plan.</p>
+        <p class="hero-lede">When many standard insurers say no, DGD opens the door to wholesale insurance markets most homeowners never see. Your home deserves coverage, and wholesale insurers are built for hard-to-insure homes in high wildfire-risk areas that retail insurers won't touch. You probably don't have to settle for coverage from the FAIR Plan.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="quote.html">Get a quote <span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
       <aside class="hero-aside" aria-label="Experience">
         <span class="num">40</span>
-        <p>years in commercial utility risk management, including markets in the U.S., London and Bermuda. Now focusing on clients in Northern California, including Truckee, Tahoe and Monterey County.</p>
+        <p>years in commercial utility risk management, including insurers in the U.S., London and Bermuda. Now focusing on clients in Northern California, including Truckee, Tahoe and Monterey County.</p>
       </aside>
     </div>
     {SCENE}
@@ -179,7 +179,7 @@ INDEX=f'''{header("home")}
       <div class="section-head">
         <p class="eyebrow">What we do</p>
         <h2 id="services-title">Coverage where the major carriers pulled back</h2>
-        <p>Standard carriers have stopped writing new homeowners policies in much of California. We work the markets that still do, and find an insurer for your home, even in high wildfire-risk areas.</p>
+        <p>Many standard insurers have stopped writing new homeowners policies in much of California. We work the markets that still do, and find an insurer for your home, even in high wildfire-risk areas.</p>
       </div>
       <div class="services">
         <article class="service">
