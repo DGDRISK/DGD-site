@@ -21,14 +21,14 @@ def header(active):
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="DGD Risk and Insurance Services, home">
       <!-- LOGO: final "Home Shield" mark (logo.svg); full lockup in logo-full.svg -->
-      <img src="logo.svg" alt="" width="40" height="45">
+      <img src="logo.svg" alt="" width="64" height="72">
       <span class="logo-text">DGD<small>Risk and Insurance Services LLC</small></span>
     </a>
     <nav class="nav-desktop" aria-label="Primary">
       <ul>
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#about">About Daniel</a></li>
-        <li><a href="mailto:{EMAIL}">Email us</a></li>
+        <li><a href="contact.html"{cur("contact")}>Contact us</a></li>
         <li><a class="btn btn-primary" href="quote.html"{cur("quote")}>Get a quote</a></li>
       </ul>
     </nav>
@@ -39,7 +39,7 @@ def header(active):
           <li><a href="index.html#services">Services</a></li>
           <li><a href="index.html#about">About Daniel</a></li>
           <li><a href="quote.html">Get a quote</a></li>
-          <li><a href="mailto:{EMAIL}">Email us</a></li>
+          <li><a href="contact.html"{cur("contact")}>Contact us</a></li>
         </ul>
       </nav>
     </details>
@@ -66,6 +66,7 @@ FOOTER=f'''<!-- ============ FOOTER ============ -->
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#about">About Daniel</a></li>
         <li><a href="quote.html">Get a quote</a></li>
+        <li><a href="contact.html">Contact us</a></li>
         <li><a href="privacy.html">Privacy policy</a></li>
       </ul>
     </nav>
@@ -201,6 +202,43 @@ INDEX=f'''{header("home")}
           <p>Practical mitigation guidance on roofs, vents and defensible space, drawn from loss-prevention experience, to make your home insurable and increase its wildfire resiliency.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ ADDITIONAL SERVICES (referral partners) ============ -->
+  <section class="section extra" id="additional-services" aria-labelledby="extra-title">
+    <div class="wrap extra-grid">
+      <div class="extra-copy">
+        <p class="eyebrow">Additional services</p>
+        <h2 id="extra-title">Beyond the policy: making your home safer</h2>
+        <p>Through trusted independent specialists, DGD can connect you with services that lower your home's wildfire risk.</p>
+        <ul class="extra-list">
+          <li><strong>Residential wildfire risk analysis</strong><span>An expert assessment of your home's exposure and the steps that matter most.</span></li>
+          <li><strong>Physical risk mitigation</strong><span>Ember-resistant vents, roof and gutter upgrades, and defensible-space work.</span></li>
+          <li><strong>Fire suppression systems</strong><span>Design and installation of exterior sprinkler and suppression systems.</span></li>
+        </ul>
+        <p class="extra-note">These services are provided by independent companies DGD refers you to, not by DGD.</p>
+      </div>
+      <figure class="extra-figure">
+        <svg class="extra-art" viewBox="0 0 480 360" role="img" aria-label="Illustration: a home protected by a rooftop fire sprinkler system, with cleared defensible space and pines">
+          <rect width="480" height="360" fill="#EFE7D8"/>
+          <path d="M0 250C80 236 160 244 240 240S400 232 480 246V360H0z" fill="#D9D2C4"/>
+          <path d="M60 300C150 284 330 284 420 300" fill="none" stroke="#B87345" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+          <g fill="#24483E"><path d="M40 252 58 200 76 252z"/><path d="M47 222 58 180 69 222z"/><path d="M412 254 434 190 456 254z"/><path d="M420 218 434 168 448 218z"/><path d="M380 256 394 214 408 256z"/></g>
+          <path d="M150 262V178L240 112l90 66v84z" fill="#24483E"/>
+          <path d="M128 186 240 104l112 82" fill="none" stroke="#1A352D" stroke-width="12" stroke-linejoin="round"/>
+          <rect x="222" y="206" width="36" height="56" fill="#B87345"/>
+          <rect x="170" y="196" width="34" height="30" fill="#F7F3EB"/><rect x="276" y="196" width="34" height="30" fill="#F7F3EB"/>
+          <g stroke="#F7F3EB" stroke-width="3"><path d="M187 196v30M170 211h34M293 196v30M276 211h34"/></g>
+          <g fill="#1A352D"><rect x="180" y="128" width="8" height="18"/><rect x="236" y="88" width="8" height="18"/><rect x="292" y="128" width="8" height="18"/></g>
+          <g fill="none" stroke="#6FA3B5" stroke-width="3" stroke-linecap="round" opacity=".9">
+            <path d="M184 126C170 100 150 92 130 96"/><path d="M184 126C198 98 214 92 232 94"/>
+            <path d="M240 86C226 58 204 50 184 54"/><path d="M240 86C254 58 276 50 296 54"/>
+            <path d="M296 126C282 98 266 92 248 94"/><path d="M296 126C310 100 330 92 350 96"/>
+          </g>
+          <g fill="#6FA3B5"><circle cx="134" cy="108" r="3"/><circle cx="152" cy="118" r="2.5"/><circle cx="190" cy="66" r="3"/><circle cx="292" cy="66" r="3"/><circle cx="346" cy="108" r="3"/><circle cx="326" cy="118" r="2.5"/></g>
+        </svg>
+      </figure>
     </div>
   </section>
 
@@ -469,8 +507,79 @@ PRIVACY=f'''{header("privacy")}
 
 {FOOTER}'''
 
+CONTACT=f'''{header("contact")}
+
+<main id="main">
+  <section class="page-head dark" aria-labelledby="c-title">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--on-dark-muted)">Contact us</p>
+      <h1 id="c-title">Talk to Daniel.</h1>
+      <p>Questions about your coverage, a non-renewal notice or the FAIR Plan? Reach Daniel directly. No call center, no hand-offs.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap form-layout">
+      <form class="quote-form contact-form" name="contact" method="POST" action="/thanks.html" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+        <p class="hint req-note"><span class="req" aria-hidden="true">*</span> Name and phone are required.</p>
+        <fieldset>
+          <legend>Send a message</legend>
+          <div class="f"><label for="c-name">Name <span class="req" aria-hidden="true">*</span></label><input id="c-name" name="name" autocomplete="name" required></div>
+          <div class="f"><label for="c-phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="c-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="f full"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email"></div>
+          <div class="f full"><label for="c-msg">How can Daniel help?</label><textarea id="c-msg" name="message"></textarea></div>
+        </fieldset>
+        <label class="check" for="c-consent"><input id="c-consent" name="consent" type="checkbox"><span>I agree that DGD Risk and Insurance Services may contact me by phone, text or email about my message. Consent is not a condition of purchase. See our <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a>.</span></label>
+        <div><button class="btn btn-primary" type="submit">Send message <span class="arrow" aria-hidden="true">→</span></button></div>
+      </form>
+
+      <aside class="form-aside" aria-label="Contact details">
+        <div class="aside-block">
+          <h2>Call</h2>
+          <p><a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a></p>
+        </div>
+        <div class="aside-block">
+          <h2>Email</h2>
+          <p><a href="mailto:{EMAIL}">{EMAIL}</a></p>
+        </div>
+        <div class="aside-block">
+          <h2>Office</h2>
+          <p class="ph">[Office address PENDING]</p>
+        </div>
+        <div class="aside-block">
+          <h2>Need a quote?</h2>
+          <p><a href="quote.html">Use the quote form</a> to send your property details.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+{FAB}
+
+{FOOTER}'''
+
+THANKS=f'''{header("thanks")}
+
+<main id="main">
+  <section class="page-head dark" aria-labelledby="t-title">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--on-dark-muted)">Message sent</p>
+      <h1 id="t-title">Thank you.</h1>
+      <p>Daniel will get back to you, usually within one business day. If it's urgent, call <a href="tel:{PHONE_TEL}" style="color:inherit">{PHONE_DISPLAY}</a>.</p>
+      <p><a class="btn btn-primary" href="index.html">Back to home</a></p>
+    </div>
+  </section>
+</main>
+
+{FOOTER}'''
+
 META={'index':('DGD Risk and Insurance Services | Hard-to-Insure Homes in Wildfire Areas','Homeowners insurance for hard-to-insure homes in high wildfire-risk areas, including Truckee, Tahoe and Monterey County. Wholesale and specialty market access.'),
       'quote':('Get a Quote | DGD Risk and Insurance Services','Request a homeowners insurance quote for a hard-to-insure home in Northern California.'),
+      'contact':('Contact Us | DGD Risk and Insurance Services','Contact Daniel Delac at DGD Risk and Insurance Services about homeowners insurance for hard-to-insure homes.'),
+      'thanks':('Thank You | DGD Risk and Insurance Services','Your message was sent.'),
       'privacy':('Privacy Policy | DGD Risk and Insurance Services','How DGD Risk and Insurance Services collects, uses, shares and protects personal information.')}
 
 def full(name,body):
@@ -493,7 +602,7 @@ def full(name,body):
 </body>
 </html>
 '''
-for n,b in (('index',INDEX),('quote',QUOTE),('privacy',PRIVACY)):
+for n,b in (('index',INDEX),('quote',QUOTE),('privacy',PRIVACY),('contact',CONTACT),('thanks',THANKS)):
     open(f'{PROD}/{n}.html','w').write(full(n,b))
 for f in ('styles.css','logo.svg','logo-full.svg'):
     shutil.copy(os.path.join(S,f),PROD); shutil.copy(os.path.join(S,f),ART)
